@@ -8,17 +8,17 @@ public class Farma {
     public int Cena;
     public int IloscBudynkow;
     public boolean Kupiona;
-    //public List<Roslina> Rosliny;
-   // public List<Zwierze> Zwierzeta;
+    public List<Roslina> Rosliny;
+    public List<zwierze> zwierze;
     public List<Budynek> Budynki;
-   // public List<Roslina> ZebraneRosliny;
+    public List<Roslina> ZebraneRosliny;
 
     public Farma(int Wielkosc, int IloscBudynkow, int Cena)
     {
         Budynki = new ArrayList<Budynek>();
-       //Rosliny = new ArrayList<Roslina>();
-        //Zwierzeta = new ArrayList<Zwierze>();
-        //ZebraneRosliny = new ArrayList<Roslina>();
+        Rosliny = new ArrayList<Roslina>();
+        zwierze = new ArrayList<zwierze>();
+        ZebraneRosliny = new ArrayList<Roslina>();
 
         Kupiona = false;
         this.IloscBudynkow = IloscBudynkow;

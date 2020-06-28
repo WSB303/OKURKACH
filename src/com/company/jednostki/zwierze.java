@@ -8,36 +8,33 @@ public class zwierze {
     public int doroslosc;
     public int aktualnyTydzien;
     public int jedzenie;
-    public int szansaRomnozenia;
+    public int SzansaRomnozenia;
     public Budynek Budynek;
     public RodzajPozywienia rodzajPozywienia;
     public zwierze(int Cena, String Nazwa,
-                   int masa, int obecnaMasa,
-                   int doroslosc,int aktualnyTydzien,
-                   int jedzenie, int szansaRomnozenia,
+                   int masa, int doroslosc, int jedzenie, int SzansaRomnozenia,
                    Budynek Budynek,RodzajPozywienia RodzajPozywienia){
         this.Cena = Cena;
         this.Nazwa = Nazwa;
         this.masa = masa;
         this.doroslosc = doroslosc;
         this.jedzenie = jedzenie;
-        this.szansaRomnozenia = szansaRomnozenia;
+        this.SzansaRomnozenia = SzansaRomnozenia;
         this.Budynek = Budynek;
         this.rodzajPozywienia = RodzajPozywienia;
         obecnaMasa = 0;
         aktualnyTydzien = 0;
     }
-    public zwierze(){
-
-    }
     public String Wypisz()
     {
-        return "Nazwa: "+Nazwa+" Cena: "+Cena+" Dobor masy: "+masa+" Czas doroslosci: "+doroslosc+" Ilosc jedzenia: "
-                +jedzenie+" Szansa na rozmnozenie: "+szansaRomnozenia+"% Aktualny tydzień: "+aktualnyTydzien;
+        return "Nazwa: "+Nazwa+" Cena: "+Cena+" Dobor masy: "+masa+" Obecna masa: "+obecnaMasa+" Czas doroslosci: "+doroslosc+" Ilosc jedzenia: "
+                +jedzenie+" Szansa na rozmnozenie: "+SzansaRomnozenia+"% Aktualny tydzień: "+aktualnyTydzien;
     }
     public zwierze Kopiuj()
     {
-        return this;
+        return new zwierze( Cena, Nazwa, masa,
+                doroslosc, jedzenie,SzansaRomnozenia,
+                Budynek ,rodzajPozywienia);
     }
     public static enum RodzajPozywienia
     {
