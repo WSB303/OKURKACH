@@ -52,9 +52,9 @@ public class Roslina {
 
     public String Wypisz()
     {
-        return "Nazwa:" + nazwa + " cena za sadzonke:" + cenaRosliny + " Koszt sadzenia: " + kosztSadzenia + " Koszt ochrony:" +
-                ochrona + " Wydajnosc:" + wydajnosc + " Dlugosc do zbioru:" + czasZbioru +
-                " Tygodnie siania: od " + okresOd + " do " + okresDo + " Koszt zbioru:" + cenaZbioru + " Cena skupu:" + cenaSkupu;
+        return "Nazwa:" +nazwa+ " cena za sadzonke:" +cenaRosliny+ " Koszt sadzenia: " +kosztSadzenia+ " Koszt ochrony:"+
+                ochrona+ " Wydajnosc:" +wydajnosc+ " Dlugosc do zbioru:" +czasZbioru+
+                " Tygodnie siania: od " +okresOd+ " do " +okresDo+ " Koszt zbioru:" +cenaZbioru+ " Cena skupu:" +cenaSkupu;
     }
 
 }
