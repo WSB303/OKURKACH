@@ -14,12 +14,14 @@ public class zGenerator {
             ZwierzeCyklicznie owca = new ZwierzeCyklicznie(100,"Owca",1,10,2,50,budynki.get(1), zwierze.RodzajPozywienia.rosliny);
             zwierzeta.add((zwierze)owca);
             ZwierzeCyklicznie kura = new ZwierzeCyklicznie(100,"Owca",1,10,2,50,budynki.get(1), zwierze.RodzajPozywienia.rosliny);
-            zwierzeta.add((zwierze)owca);
+            zwierzeta.add((zwierze)kura);
             ZwierzeCyklicznie pies = new ZwierzeCyklicznie(100,"Owca",1,10,2,50,budynki.get(1), zwierze.RodzajPozywienia.mieso);
-            zwierzeta.add((zwierze)owca);
+            zwierzeta.add((zwierze)pies);
             ZwierzeCyklicznie swinia = new ZwierzeCyklicznie(100,"Owca",1,10,2,50,budynki.get(1), zwierze.RodzajPozywienia.rosliny);
-            zwierzeta.add((zwierze)owca);
+            zwierzeta.add((zwierze)swinia);
             ZwierzeCyklicznie krowa = new ZwierzeCyklicznie(100,"Owca",1,10,2,50,budynki.get(1), zwierze.RodzajPozywienia.rosliny);
+            zwierzeta.add((zwierze)krowa);
+
         }
 
 }
