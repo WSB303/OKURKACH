@@ -13,23 +13,23 @@ public class mWypisywanie {
         }
         public static String OpcjaSklep()
         {
-            return null;
+            return  "Kup:\n*1* Farma \n*2* Ziemia uprawna Cena:10\n*3* Budynek \n*4* Zwierze \n*5* Roslina\n*6* Jedzenie dla zwierzat \n*7* Powrot";
         }
         public static String OpcjaZasoby()
         {
-            return null;
+            return "Wypisz: \n*1* Zwierzeta \n*2* Rosliny \n*3* Powrot";
         }
         public static String OpcjaMenu()
         {
-            return null;
+            return "Wybierz Opcje: \n*1* Sklep \n*2* Sprzedaz \n*3* Zbiory \n*4* Stan zapasow \n*5* Informacje o zasobach \n*6* Zasadz rosline\n*7* Przerob rosliny na pasze\n*8* Nastepny tydzien \n*9* Zakoncz";
         }
         public static String OpcjaSprzedazy()
         {
-            return null;
+            return "Sprzedaj:\n*1* Ziemia uprawna \n*2* Zwierze \n*3* Roslina \n*4* Powrot";
         }
         public static String OpcjaJedzenie()
         {
-            return null;
+            return  "Kup: \n*1* Rosliny\n*2* Mieso\n*3* Powrot";
         }
 
     }
