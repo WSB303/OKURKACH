@@ -82,11 +82,121 @@ public class Farmer {
         int ileRoslin=0;
         for (zwierze zwierze: Farma.Zwierzeta)
         {
-            if(zwierze.rodzajPozywienia+=zwierze.)
+            if(zwierze.rodzajPozywienia == zwierze.rodzajPozywienia.mieso)
             {
-                IloscMiesa += zwierze.
+                ileMiesa += zwierze.jedzenie;
+            }else
+            {
+                ileMiesa += zwierze.jedzenie;
             }
+
         }
+        return ileMiesa*48>=IloscMiesa&& IloscRoslin*48>=IloscStodola+IloscRoslin;
+    }
+    public void dodajTydzien()
+    {
+        if(tydzien<48)
+        {
+            tydzien++;
+        }else{tydzien=1;rok++;}
+        try
+        {
+            if(IloscZiemi>= 20 && iGatunkiRoslin(generatorRoslin.rosliny)>=5 && iGatunkiZwierzat(generatorZwierzat.zwierzeta)>=5 && jedzenieNaRok())
+            {
+                System.out.println("Wygrałeś gre.");
+                wygrana=true;
+            }
+            for(Roslina roslina: Farma.Rosliny)
+            {
+                if(roslina.czyposadzona)
+                {
+                    pieniadze -= roslina.ochrona;
+                    if(roslina.obecnytydzien!=roslina.czasZbioru)
+                    {
+                        roslina.obecnytydzien++;
+                    }
+                    else {roslina.czydozebrania=true;}
+                }
+            }
+            for (zwierze zwierze:Farma.Zwierzeta)
+            {// instanceof sprawdza czy obiekt jest podtypem
+                if(zwierze instanceof ZwierzeCyklicznie)
+                {
+                    pieniadze+=((ZwierzeCyklicznie) zwierze).Zysk(0,10);
+                }
+                zwierze.aktualnyTydzien++;
+                if(zwierze.aktualnyTydzien>=zwierze.doroslosc&& tenSamTyp(zwierze)>=1)
+                {
+                    int szansa = Losuj(0,100);
+
+                    if(szansa>=0&&szansa<=zwierze.SzansaRomnozenia)
+                    {
+                        System.out.println("Urodził się "+ zwierze.Nazwa);
+                        zwierze zwierzeDziecko = zwierze.Kopiuj();
+                        zwierzeDziecko.obecnaMasa=0;
+                        zwierzeDziecko.aktualnyTydzien=0;
+                        Farma.Zwierzeta.add(zwierzeDziecko);
+                    }
+
+
+                }
+
+                if(IloscMiesa>zwierze.jedzenie&&zwierze.rodzajPozywienia.equals(zwierze.rodzajPozywienia.mieso))
+                {
+                    IloscMiesa-=zwierze.jedzenie;
+                    zwierze.obecnaMasa+=zwierze.masa;
+                }
+                else if(IloscStodola>zwierze.jedzenie&&zwierze.rodzajPozywienia.equals(zwierze.rodzajPozywienia.rosliny))
+                {
+                    IloscStodola -= zwierze.jedzenie;
+                    zwierze.obecnaMasa += zwierze.masa;
+                }
+                else if(IloscRoslin>zwierze.jedzenie&&zwierze.rodzajPozywienia.equals(zwierze.rodzajPozywienia.rosliny))
+                {
+                    IloscRoslin -= zwierze.jedzenie;
+                    zwierze.obecnaMasa += zwierze.masa;
+                }
+                else
+                {
+                    System.out.println("Nie masz jedzenia!");
+                    zwierze.masa -= zwierze.masa;
+                    if (zwierze.masa < 0)
+                    {
+                        System.out.println("Nie nakarmiles zwierząt... Zwierze: " + zwierze.Nazwa + " umarło");
+                        Farma.Zwierzeta.remove(zwierze);
+                    }
+
+                }
+            }
+
+            int losowanie=Losuj(0,50);
+            if(losowanie==1)
+            {
+                System.out.println("Robaki zaatakowały Twoje plony!");
+                Farma.ZebraneRosliny.clear();
+            }
+        } catch (Exception ex){ System.out.println("Błąd danych."); }
     }
 
+
+
+
+    public int tenSamTyp(zwierze zwierze)
+    {
+        int wynik=0;
+        try
+        {
+            for(zwierze zwierzeta: Farma.Zwierzeta)
+            {
+            if(zwierzeta.Nazwa.equals(zwierze.Nazwa))
+            {
+                wynik++;
+            }
+            }
+        }catch (Exception ex)
+        {
+            System.out.println("Błąd");
+        }
+        return wynik/2;
+    }
 }
