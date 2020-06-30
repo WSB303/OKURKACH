@@ -9,7 +9,7 @@ public class rGenerator {
     public List<Roslina> rosliny;
     public rGenerator()
     {
-        rosliny = new ArrayList<Roslina>();
+        rosliny = new ArrayList<>();
     }
     public void rGenerowanie(){
     Roslina salata = new Roslina("Sałata",
@@ -33,11 +33,11 @@ public class rGenerator {
             40,
             10, 15);
     rosliny.add(sorgo);
-    Roslina kukurydza = new Roslina("Kukurydza",20,10, 15, 5, 10, 40,48, 10, 7);
+    Roslina kukurydza = new Roslina("Kukurydza",20,8, 7, 5, 48, 10,40, 10, 15);
     rosliny.add(kukurydza);
-    Roslina jablon = new Roslina("Jabłoń",100,8, 3, 5, 10, 106,100, 10, 15);
+    Roslina jablon = new Roslina("Jabłoń",100,8, 7, 5, 100, 10,40, 10, 15);
     rosliny.add(jablon);
-    Roslina rukola = new Roslina("Rukola",10, 10, 5, 1, 10, 24,10, 10, 3);
+    Roslina rukola = new Roslina("Rukola",10, 20, 10, 1, 15, 1, 20, 10, 2);
     rosliny.add(rukola);
     }
 

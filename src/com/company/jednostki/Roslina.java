@@ -21,9 +21,9 @@ public class Roslina {
             int kosztSadzenia,
             int ochrona,
             int wydajnosc,
+            int czasZbioru,
             int okresOd,
             int okresDo,
-            int czasZbioru,
             int cenaZbioru,
             int cenaSkupu)
     {
