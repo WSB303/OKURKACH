@@ -15,6 +15,22 @@ public class mWypisywanie {
         {
             return null;
         }
+        public static String OpcjaZasoby()
+        {
+            return null;
+        }
+        public static String OpcjaMenu()
+        {
+            return null;
+        }
+        public static String OpcjaSprzedazy()
+        {
+            return null;
+        }
+        public static String OpcjaJedzenie()
+        {
+            return null;
+        }
 
     }
 }
