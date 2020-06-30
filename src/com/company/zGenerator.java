@@ -11,16 +11,16 @@ public class zGenerator {
     public zGenerator(){ zwierzeta = new ArrayList<zwierze>();}
     public void zGeneruj(List<Budynek> budynki)
         {
-            ZwierzeCyklicznie owca = new ZwierzeCyklicznie(100,"Owca",1,10,2,50,budynki.get(1), zwierze.RodzajPozywienia.rosliny);
+            ZwierzeCyklicznie owca = new ZwierzeCyklicznie(100,"Owca",1,10,2,40,budynki.get(1), zwierze.RodzajPozywienia.rosliny);
             zwierzeta.add((zwierze)owca);
-            ZwierzeCyklicznie kura = new ZwierzeCyklicznie(100,"Owca",1,10,2,50,budynki.get(1), zwierze.RodzajPozywienia.rosliny);
+            ZwierzeCyklicznie kura = new ZwierzeCyklicznie(100,"kura",1,10,2,50,budynki.get(0), zwierze.RodzajPozywienia.rosliny);
             zwierzeta.add((zwierze)kura);
-            ZwierzeCyklicznie pies = new ZwierzeCyklicznie(100,"Owca",1,10,2,50,budynki.get(1), zwierze.RodzajPozywienia.mieso);
+            ZwierzeCyklicznie pies = new ZwierzeCyklicznie(100,"pies",1,10,2,70,budynki.get(2), zwierze.RodzajPozywienia.mieso);
             zwierzeta.add((zwierze)pies);
-            ZwierzeCyklicznie swinia = new ZwierzeCyklicznie(100,"Owca",1,10,2,50,budynki.get(1), zwierze.RodzajPozywienia.rosliny);
+            ZwierzeCyklicznie swinia = new ZwierzeCyklicznie(100,"swinia",1,10,2,20,budynki.get(3), zwierze.RodzajPozywienia.rosliny);
             zwierzeta.add((zwierze)swinia);
-            ZwierzeCyklicznie krowa = new ZwierzeCyklicznie(100,"Owca",1,10,2,50,budynki.get(1), zwierze.RodzajPozywienia.rosliny);
-            zwierzeta.add((zwierze)krowa);
+            ZwierzeCyklicznie kon = new ZwierzeCyklicznie(100,"kon",1,10,2,100,budynki.get(3), zwierze.RodzajPozywienia.rosliny);
+            zwierzeta.add((zwierze)kon);
 
         }
 

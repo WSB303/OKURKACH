@@ -33,6 +33,8 @@ public class Farmer {
         generatorBudynkow = new bGenerator();
         generatorRoslin = new rGenerator();
         generatorZwierzat = new zGenerator();
+        generatorBudynkow.bWygeneruj();
+        generatorRoslin.rGenerowanie();
         generatorZwierzat.zGeneruj(generatorBudynkow.budynki);
     }
 
@@ -175,7 +177,7 @@ public class Farmer {
                 System.out.println("Robaki zaatakowały Twoje plony!");
                 Farma.ZebraneRosliny.clear();
             }
-        } catch (Exception ex){ System.out.println("Błąd danych."); }
+        } catch (Exception ex){ System.out.println(""); }
     }
 
 

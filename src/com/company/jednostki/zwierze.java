@@ -28,7 +28,7 @@ public class zwierze {
     public String Wypisz()
     {
         return "Nazwa: "+Nazwa+" Cena: "+Cena+" Dobor masy: "+masa+" Obecna masa: "+obecnaMasa+" Czas doroslosci: "+doroslosc+" Ilosc jedzenia: "
-                +jedzenie+" Szansa na rozmnozenie: "+SzansaRomnozenia+"% Aktualny tydzień: "+aktualnyTydzien;
+                +jedzenie+" Szansa na rozmnozenie: "+SzansaRomnozenia+"% Obecny czas: "+aktualnyTydzien;
     }
     public zwierze Kopiuj()
     {
