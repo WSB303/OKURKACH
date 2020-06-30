@@ -9,7 +9,7 @@ public class Farma {
     public int IloscBudynkow;
     public boolean Kupiona;
     public List<Roslina> Rosliny;
-    public List<zwierze> zwierze;
+    public List<zwierze> Zwierzeta;
     public List<Budynek> Budynki;
     public List<Roslina> ZebraneRosliny;
 
@@ -17,7 +17,7 @@ public class Farma {
     {
         Budynki = new ArrayList<Budynek>();
         Rosliny = new ArrayList<Roslina>();
-        zwierze = new ArrayList<zwierze>();
+        Zwierzeta = new ArrayList<zwierze>();
         ZebraneRosliny = new ArrayList<Roslina>();
 
         Kupiona = false;

@@ -11,6 +11,9 @@ public class Roslina {
     public int czasZbioru;
     public int cenaZbioru;
     public int cenaSkupu;
+    public boolean czyposadzona;
+    public boolean czydozebrania;
+    public int obecnytydzien;
 
     public Roslina(
             String nazwa,
@@ -34,6 +37,9 @@ public class Roslina {
         this.okresDo = okresDo;
         this.cenaZbioru = cenaZbioru;
         this.cenaSkupu = cenaSkupu;
+        czydozebrania = false;
+        czyposadzona = false;
+        obecnytydzien = 1;
     }
 
     public Roslina Kopiuj()//tworzy nowy obiekt, przy edycji nie edytują się wszystkie tylko pojedyńcze
