@@ -11,7 +11,7 @@ public class Main {
 
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        Farmer farmer = new Farmer(2000,1,2020);
+        Farmer farmer = new Farmer(200000,1,2020);
         int WyborMenu=0;
         fGenerator generatorFarm = new fGenerator();
         generatorFarm.fGeneruj(10,10,100,2,5,100,1000);

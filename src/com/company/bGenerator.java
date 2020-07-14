@@ -13,8 +13,7 @@ public class bGenerator {
     }
     public void bWygeneruj()
     {
-        Budynek stodola = new Budynek(100, "Stodola", 500);
-        budynki.add(stodola);
+
         Budynek buda = new Budynek(100, "Buda",4);
         budynki.add(buda);
         Budynek kurnik = new Budynek(100, "Kurnik",30);
@@ -23,5 +22,7 @@ public class bGenerator {
         budynki.add(obora);
         Budynek chlew = new Budynek(100, "Chlew", 20);
         budynki.add(chlew);
+        Budynek stodola = new Budynek(100, "Stodola", 500);
+        budynki.add(stodola);
     }
 }

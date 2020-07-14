@@ -89,7 +89,7 @@ public class mGlowne {
             }
             catch (Exception ex)
             {
-                System.out.println("Bledne dane");
+                System.out.println("Pomyślnie przerobiono na paszę.");
             }
 
         }

@@ -89,11 +89,11 @@ public class Farmer {
                 ileMiesa += zwierze.jedzenie;
             }else
             {
-                ileMiesa += zwierze.jedzenie;
+                ileRoslin += zwierze.jedzenie;
             }
 
         }
-        return ileMiesa*48>=IloscMiesa&& IloscRoslin*48>=IloscStodola+IloscRoslin;
+        return ileMiesa*48>=IloscMiesa&& ileRoslin*48>=IloscStodola+IloscRoslin;
     }
     public void dodajTydzien()
     {
@@ -161,8 +161,8 @@ public class Farmer {
                 else
                 {
                     System.out.println("Nie masz jedzenia!");
-                    zwierze.masa -= zwierze.masa;
-                    if (zwierze.masa < 0)
+                    zwierze.obecnaMasa -= zwierze.masa;
+                    if (zwierze.obecnaMasa < 0)
                     {
                         System.out.println("Nie nakarmiles zwierząt... Zwierze: " + zwierze.Nazwa + " umarło");
                         Farma.Zwierzeta.remove(zwierze);
